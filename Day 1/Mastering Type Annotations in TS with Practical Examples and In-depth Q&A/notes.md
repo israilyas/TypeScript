@@ -30,5 +30,19 @@ Number types in TypeScript support arithmetic operations such as
 
 The result of those operatins on numbers is also of tpe number.
 
+## NaN 
+
+- In TypeScript, the assignment of NaN to a variable of type number is valid because NaN is a special value of the number type.
+
+### Here’s why:
+
+- TypeScript Type System: In TypeScript, NaN (Not-a-Number) is a valid value for the number type. It represents an invalid number or an unrepresentable result of a numeric operation (e.g., 0/0).
+
+- NaN is of Type number: Since NaN is part of JavaScript’s number type, and TypeScript is a superset of JavaScript, TypeScript allows NaN to be assigned to variables of type number. This is why the following code works without any type errors:
+
+`let nanValue: number = NaN;`
+`console.log(nanValue); // NaN`
+
+
 
 
