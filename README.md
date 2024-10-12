@@ -18,7 +18,7 @@ Example:
 
 `let age: number = 25; // Explicitly defining that 'age' is a number`
 
-`# TypeScript: Type Annotation and Type Inference
+# TypeScript: Type Annotation and Type Inference
 
 ## Type Annotation
 **Type annotation** is when you explicitly declare the type of a variable, function parameter, or return value. This helps TypeScript know exactly what type the value should be, reducing ambiguity and making the code more readable and predictable.
