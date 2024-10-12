@@ -31,3 +31,18 @@ Example:
 `function greet(name: string): string {
   return 'Hello, ${name}';
 }`
+
+---
+
+# Prereuisites To Learn TypesScript
+
+- Basic of JavaScript
+
+---
+
+# Installation
+
+- Need  nodejs
+- Code Editor (VS Code)
+
+
