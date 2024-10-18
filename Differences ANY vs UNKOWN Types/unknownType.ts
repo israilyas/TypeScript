@@ -3,9 +3,9 @@
 //  The unknown type is a safer alternative to any beacause it still enforces type checking and type safety;
 // variable of type unknown can hold values of any type, but  you must perform type checks or type assertions before using those in specific ways.
 
-let myNum:unknown = 10;
-myNum = "ten";
-myNum = true;
+// let myNum:unknown = 10;
+// myNum = "ten";
+// myNum = true;
 
 // ==== type checking  ====
 
@@ -26,7 +26,7 @@ myNum = true;
 // Home Work
 
 async function fetchData():Promise<unknown> {
-    const response = await fetch('https://api.example.com/data')
+    const response = await fetch('https://api.github.com/users')
     const data = await response.json();
     return data;
 }
@@ -36,6 +36,8 @@ async function processData() {
 
     if (typeof response === 'object') {
         console.log(response)
+        console.log(response[0])
         // Perform operation on the responce object
     }
 }
+processData() ;
