@@ -3,22 +3,19 @@
 //implement a getter method balance that returns the current balance.
 
 class BankAccount{
-    private property_balance:number = 0;
+    private _balance:number = 0;
 
     public set balance(newBalance:number){
-        if(newBalance <= 0){
-            throw new Error("Account is empty.")
+        if(newBalance < 0){
+            throw new Error("Invalid Balance.")
         }
         else{
-            this.property_balance = newBalance;
+            this._balance = newBalance;
         }
     }
 
     public get balance():number{
-        if(this.property_balance === 0){
-            throw new Error("Account is empty.");
-        }
-        return this.property_balance;
+        return this._balance;
     }
 }
 
@@ -38,28 +35,27 @@ class BankAccount{
 class Temperature{
     private _celsius = 0;
     
-    public get celsius():string{
-        return `${this._celsius} C`;
+    public get celsius(){
+        return this._celsius;
     }
 
-    public set celsius(temp:number){
-        this._celsius = temp;
+    public set celsius(newCelsius:number){
+        this._celsius = newCelsius;
     }
     // In Fahrenheit
 
-    public get fahrenheit():string{
-        return `${this._celsius = (this._celsius * (9/5)) +32} F`;
+    public get fahrenheit(){
+        return (this._celsius * 9)/5 +32;
     }
 
-    public set fahrenheit(temp:number){
-        this._celsius = (temp - 32 ) + 9/5;
+    public set fahrenheit(newFah:number){
+        this._celsius = ((newFah - 32 ) *5)/9;
     }
 }
 
 const temp1 = new Temperature();
-// temp1.celsius = 25;
-temp1.fahrenheit = 98.6;
-console.log(temp1)
-console.log(temp1.celsius)
-console.log(temp1.fahrenheit)
+temp1.celsius = 25;
+console.log("In Fahrenheit "+temp1.fahrenheit)
+temp1.fahrenheit = 77;
+console.log("In Celsius "+temp1.celsius)
 // console.log(temp1.fahrenheit)
